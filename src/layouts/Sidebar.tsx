@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { Layout, Menu as AntdMenu } from 'antd';
-import { UserOutlined, MenuFoldOutlined, BankOutlined, CopyrightOutlined, WalletOutlined } from '@ant-design/icons';
+import { PieChartOutlined, MenuFoldOutlined, BankOutlined, CopyrightOutlined, WalletOutlined, CrownOutlined } from '@ant-design/icons';
 import { ItemType } from 'antd/lib/menu/hooks/useItems';
 import LOGO from '@/assets/images/LOGO.png';
 
@@ -36,24 +36,22 @@ function Sidebar() {
 
   const menuList: ItemType[] = useMemo(() => [
     {
-      key: 'users',
-      icon: <UserOutlined />,
-      label: 'User',
+      key: 'lottos',
+      icon: <CrownOutlined />,
+      label: '로또',
     },
     {
-      key: 'banks',
-      icon: <BankOutlined />,
-      label: 'Bank',
+      key: 'statistics',
+      icon: <PieChartOutlined />,
+      label: '통계',
       children: [
         {
-          key: 'money',
-          icon: <CopyrightOutlined />,
-          label: 'money',
+          key: 'combinations',
+          label: '조합',
         },
         {
-          key: 'bonds',
-          icon: <WalletOutlined />,
-          label: 'bond',
+          key: 'numbers',
+          label: '숫자',
         },
       ]
     }
